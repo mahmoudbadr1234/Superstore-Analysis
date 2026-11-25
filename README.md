@@ -166,7 +166,7 @@ This project analyzed **9,994 line items** from the Superstore dataset spanning 
 
 ## 🏆 **Key Insights**
 
-1. **📉 Discount Threshold**: Discounts above **20%** consistently lead to losses across most sub-categories.
+1. **📉 Discount Threshold**: Loss rate increases as discount rises — from 9.4% (no discount) to 79.4% (61%+ discount).
 2. **🏷️ Loss-Making Sub-categories**: Tables and Bookcases show negative profit despite high sales volume.
 3. **👥 Customer Segments**: Corporate segment has the highest profit margin (13.03%); Consumer has the highest volume.
 4. **🗺️ Regional Performance**: California leads in sales ($457K+), but Texas is the worst performer by profit (-$2,572).
