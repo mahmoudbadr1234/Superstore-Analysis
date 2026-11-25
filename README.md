@@ -125,7 +125,7 @@ This project analyzed **9,994 line items** from the Superstore dataset spanning 
 | Sub-Category | Profit |
 |--------------|--------|
 | Bookcases | -$34,727.56 |
-| Staples | -$12,752.48 |
+| Tables | -$1,275.48 |
 | Supplies | -$118.10 |
 
 ### 📅 **Year-over-Year Performance**
@@ -136,16 +136,23 @@ This project analyzed **9,994 line items** from the Superstore dataset spanning 
 | 2016 | $609,205.60 | $81,795.17 |
 | 2017 | $733,215.26 | $34,349.27 |
 
-### 🏷️ **Discount Bands vs Profit (Verification)**
-| Discount Band | Avg Discount | Avg Profit | Orders | Loss Rate |
-|---------------|--------------|------------|--------|-----------|
-| No discount | 0% | $85.42 | 3,112 | 8.2% |
-| 11-20% | 15.5% | $28.31 | 2,845 | 12.1% |
-| 21-40% | 30.2% | -$12.45 | 2,301 | 41.7% |
-| 41-60% | 50.1% | -$45.80 | 1,203 | 68.3% |
-| 61%+ | 68.5% | -$89.15 | 533 | 79.4% |
+### 🏷️ **Discount Bands vs Profit (Verified)**
 
-> **Verified:** Orders with discounts above **20%** consistently show negative average profit and loss rates exceeding **40%**, confirming the discount threshold insight.
+| Discount Band | Orders | % of Orders | Loss Rate |
+|---------------|--------|-------------|-----------|
+| No discount | 4,798 | 48.0% | 9.4% |
+| 11-20% | 3,190 | 31.9% | 18.7% |
+| 21-40% | 1,213 | 12.1% | 34.2% |
+| 41-60% | 519 | 5.2% | 56.8% |
+| 61%+ | 274 | 2.7% | 79.4% |
+
+> **Verified:** Loss rate climbs from **9.4%** (no discount) to **79.4%** (61%+ discount). The 21%+ discount bands account for 20% of orders but drive the majority of losses — confirming that discounts above 20% systematically erode profitability.
+
+### 📸 **Visualization Previews**
+
+| Sub-Category Profit | Discount Bands vs Loss Rate | RFM Customer Segments |
+|:-------------------:|:---------------------------:|:---------------------:|
+| ![](images/05_subcategory_profit.png) | ![](images/sql_q15_discount_bands.png) | ![](images/sql_q21_rfm_segments.png) |
 
 ### 🚚 **Shipping Mode Distribution**
 | Ship Mode | Count |
